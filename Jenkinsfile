@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.11-slim'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
-    }
+    agent any
 
     options {
         skipStagesAfterUnstable()
@@ -32,7 +27,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'py.test --junit-xml test-reports/results.xml sources/test_calc.py'
+                sh 'pytest --junit-xml=test-reports/results.xml sources/test_calc.py'
                 junit 'test-reports/results.xml'
             }
         }
