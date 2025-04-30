@@ -5,17 +5,19 @@ pipeline {
         skipStagesAfterUnstable()
     }
 
-    stages {
-        stage('Setup') {
-            steps {
-               sh '''
-                    apt-get update && \
-                    apt-get install -y --no-install-recommends python3 python3-pip binutils && \
-                    python3 -m pip install --upgrade pip && \
-                    pip3 install -r requirements.txt
-                '''
-            }
+    stage('Setup') {
+        steps {
+            sh '''
+                apt-get update && \
+                apt-get install -y --no-install-recommends python3 python3-pip python3-venv binutils && \
+                python3 -m venv venv && \
+                . venv/bin/activate && \
+                pip install --upgrade pip && \
+                pip install -r requirements.txt
+            '''
         }
+    }
+
 
         stage('Build') {
             steps {
