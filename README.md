@@ -88,7 +88,7 @@ This project features a simple Python command-line tool integrated with a full-f
    - In the configuration:
      - Use "Pipeline script from SCM"
      - SCM: Git
-     - Repository URL: `https://github.com/TarakKatoch/Jenkins-Orchestration.git`
+     - Repository URL: `https://github.com/mitul-2210/Jenkins-CI-CD-Pipeline.git`
      - Branch: `*/master`
 
 <div align="center">
