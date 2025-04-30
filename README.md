@@ -52,7 +52,7 @@ This project features a simple Python command-line tool integrated with a full-f
    ```
 
 <div align="center">
-  <img src="/images/pull%20and%20start%20Jenkins.png" alt="Start Jenkins containers">
+  <img src="/images/image1.jpg" alt="Start Jenkins containers">
 </div>
 
 2. **Retrieve the admin password**:
@@ -61,7 +61,7 @@ This project features a simple Python command-line tool integrated with a full-f
    ```
 
 <div align="center">
-  <img src="/images/Screenshot%202025-03-26%20232332.png" alt="Admin password">
+  <img src="/images/image2.png" alt="Admin password">
 </div>
 
 3. **Access Jenkins dashboard**:
@@ -69,20 +69,24 @@ This project features a simple Python command-line tool integrated with a full-f
    - Paste the password to unlock Jenkins
 
 <div align="center">
-  <img src="/images/1.png" alt="Login to Jenkins">
+  <img src="/images/image3.png" alt="Login to Jenkins">
 </div>
 
 4. **Install suggested plugins** when prompted.
 
 <div align="center">
-  <img src="/images/Screenshot%202025-03-26%20233541.png" alt="Install plugins">
+  <img src="/images/image4.png" alt="Install plugins">
 </div>
 
 5. **Create your admin user** and continue.
 
-6. **Set the Jenkins URL** (default is fine): `http://localhost:8080/`.
+7. **Set the Jenkins URL** (default is fine): `http://localhost:8080/`.
+<div align="center">
+  <img src="/images/image5.png" alt="Install plugins">
+</div>
 
-7. **Create a new pipeline job**:
+
+9. **Create a new pipeline job**:
    - Name: `simple-python-pyinstaller-app`
    - Type: Pipeline
    - In the configuration:
@@ -92,7 +96,7 @@ This project features a simple Python command-line tool integrated with a full-f
      - Branch: `*/master`
 
 <div align="center">
-  <img src="/images/Screenshot%202025-03-26%20233941.png" alt="Pipeline config">
+  <img src="/images/image6.png" alt="Pipeline config">
 </div>
 
 8. **Install Docker inside Jenkins**:
@@ -103,7 +107,7 @@ This project features a simple Python command-line tool integrated with a full-f
    ```
 
 <div align="center">
-  <img src="/images/Screenshot%202025-03-26%20234702.png" alt="Docker inside Jenkins">
+  <img src="/images/image7.png" alt="Docker inside Jenkins">
 </div>
 
 9. **Add Docker plugins**:
@@ -114,7 +118,7 @@ This project features a simple Python command-line tool integrated with a full-f
      - docker-build-step
 
 <div align="center">
-  <img src="/images/Screenshot%202025-03-26%20235156.png" alt="Plugin install">
+  <img src="/images/image8.png" alt="Plugin install">
 </div>
 
 10. **Restart Jenkins** to apply plugin changes:
@@ -129,7 +133,7 @@ This project features a simple Python command-line tool integrated with a full-f
    - Click **Build Now**
 
 <div align="center">
-  <img src="/images/Screenshot%202025-03-27%20000235.png" alt="Run pipeline">
+  <img src="/images/image9.png" alt="Run pipeline">
 </div>
 
 ---
@@ -138,10 +142,6 @@ This project features a simple Python command-line tool integrated with a full-f
 
 1. **Download the build artifact**:
    - From the Jenkins build page, download the `add2vals` executable.
-
-<div align="center">
-  <img src="/images/Screenshot%202025-03-27%20000550.png" alt="Download binary">
-</div>
 
 > Note: Since Jenkins runs in a Linux container, the output will be a Linux binary.
 
@@ -165,7 +165,7 @@ chmod +x add2vals
 ```
 
 <div align="center">
-  <img src="/images/Screenshot%202025-03-27%20034048.png" alt="Run in WSL">
+  <img src="/images/image10.png" alt="Run in WSL">
 </div>
 
 ---
