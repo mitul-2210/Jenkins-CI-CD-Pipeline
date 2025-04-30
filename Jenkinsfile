@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                sh '''
-                    apt-get update && apt-get install -y binutils
+               sh '''
+                    apt-get update && apt-get install -y --no-install-recommends binutils
                     python -m pip install --upgrade pip
                     pip install -r requirements.txt
                 '''
