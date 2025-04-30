@@ -1,0 +1,13 @@
+# Ignore Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Ignore build artifacts
+build/
+dist/
+*.spec
+
+# OS / IDE files
+.DS_Store
+*.log
